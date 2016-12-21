@@ -16,6 +16,7 @@
 
         <ImageView
             android:id="@+id/iv_item_lecture_pic"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="198dp"/>
 

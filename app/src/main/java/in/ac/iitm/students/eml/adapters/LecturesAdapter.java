@@ -78,19 +78,30 @@ public class LecturesAdapter extends RecyclerView.Adapter<LecturesAdapter.ViewHo
         holder.rlLecture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "You clicked " + title, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "You clicked " + title + holder.tvLecturer.getWidth(), Toast.LENGTH_SHORT).show();
             }
         });
 
         int bgColors[] = {R.color.amber, R.color.cyan, R.color.brown, R.color.lightGreen};
         holder.ivLecturePic.setBackgroundResource(bgColors[(position % 4)]);
 
-        String url = "http://res.cloudinary.com/dqmdyvfpp/image/upload/" +
-                "h_" + 198 +
-                ",c_fill/ChoreoHeader.jpg";
-        Toast.makeText(context, url, Toast.LENGTH_SHORT).show();
-        Picasso.with(context).load(url).into(holder.ivLecturePic);
+//        String url = "http://res.cloudinary.com/dqmdyvfpp/image/upload/" +
+//                "h_" + holder.ivLecturePic.getHeight() +
+//                ",w_" + holder.ivLecturePic.getWidth() +
+//                ",c_crop/classical_night_2.jpg";
+//        Toast.makeText(context, url, Toast.LENGTH_SHORT).show();
+//        Picasso.with(context).load(url).into(holder.ivLecturePic);
 
+        Cloudinary cloudinary = new Cloudinary("cloudinary://522398579359467:R-PMLKdYghJXbpYs_y08-fI74hc@dqmdyvfpp");
+        Picasso.with(context).load(cloudinary.url().
+                transformation(new Transformation()
+                        .width(holder.tvLecturer.getWidth())
+                        .height(holder.ivLecturePic.getHeight())
+                        .crop("center")
+                        .quality("auto")
+                        .fetchFormat("auto"))
+                .generate("http://res.cloudinary.com/saarang2017/image/upload/v1480619425/buzzer_xro2tn.jpg"))
+                .into(holder.ivLecturePic);
     }
 
 
