@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iitm.students.eml.activities.DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_details_lecture_pic"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:background="@color/lightGreen" />
+
+        <TextView
+            android:id="@+id/tv_details_lecturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="Lecture Personality"
+            android:textColor="#000000"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/tv_details_lecture_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="21 December, 2016"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_details_lecture_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="4:30 PM"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_details_lecture_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="Lecture info appears here. Send the text as intent extra from LectureAdapter or download the text from server by querying lecturer name. Experiment with text gravity and decide whichone looks better, center or left. Exact text and background colors to be decided while merging with other projects."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
