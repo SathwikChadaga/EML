@@ -60,9 +60,10 @@
             android:layout_height="wrap_content"
             android:gravity="left"
             android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
             android:paddingRight="8dp"
-            android:paddingTop="4dp"
-            android:text="Lecture info appears here. Send the text as intent extra from LectureAdapter or download the text from server by querying lecturer name. Experiment with text gravity and decide whichone looks better, center or left. Exact text and background colors to be decided while merging with other projects."
+            android:paddingTop="8dp"
+            android:text="Lecture info appears here. Send the text as intent extra from LectureAdapter or download the text from server by querying lecturer name.\n\nExperiment with text gravity and decide whichone looks better, center or left. Exact text and background colors to be decided while merging with other projects."
             android:textColor="#000000"
             android:textSize="16sp" />
 
